@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "Chenming Zhu"
-description              : "Academic page. "
+description              : "Ph.D. Student@HKU IDS|HKU-MMLab,"
 repository               : "ZCMax/zcmax.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -28,7 +28,7 @@ author:
   employer         :
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=QabwS_wAAAAJ"
-  email            : "zhuchenming@pjlab.org.cn"
+  email            : "zcm952742165@gmail.com"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
