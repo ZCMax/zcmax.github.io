@@ -44,7 +44,7 @@ My current research interests lie in the <strong>Multimodal Large Language Model
 </div>
 
 
-<div class='paper-box'><div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2024</div><img src='images/2024_cvpr_embodiedscan/embodiedscan.gif' alt="EmbodiedScan: A Holistic Multi-Modal 3D Perception Suite Towards Embodied AI" loading="lazy" width="70%"></div></div>
+<div class='paper-box'><div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2024</div><img src='images/2024_cvpr_embodiedscan/embodiedscan.gif' alt="EmbodiedScan: A Holistic Multi-Modal 3D Perception Suite Towards Embodied AI" loading="lazy" width="85%"></div></div>
 <div class='paper-box-text' markdown="1">
 
   <div class="section-subheading article-title mb-0 mt-0">
