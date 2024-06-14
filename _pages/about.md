@@ -73,8 +73,23 @@ My current research interests lie in the <strong>Multimodal Large Language Model
 </div>
 </div>
 
-# 🎖 Academic Services
+# 📖 Projects
+**MMDetection3D: OpenMMLab next-generation platform for general 3D perception. (Github >5k stars 🔥)**
+**C0RE MAINTAINER & DEVELOPER**
+– MMDetection3D unifies the pipeline and modular design of mono3D, LiDAR-based,and multi-modality
+3D object detection.
+– It supports state-of-the-art 3D object detectors of different modalities in multiple indoor and outdoor
+datasets.
+– It builds strong foundations,in a universal framework, for general 3D object detection.
+
+# 🎖 Honors and Awards
+- *2023.10* Runner-up of Waymo Camera-Only 3D Detection Challenge, CVPR 2022
+- *2017-2018/2018-2019* Excellent Undergraduate Scholarship of UESTC
+- *2018* Outstanding Student Award of School of Computer Science and Engineering, UESTC
+
+# 💬  Academic Services
 I served as a reviewer for CVPR, ICCV, ECCV, NeurIPS.
 
 # 💻 Internships
-- *2021.06 - *, Research Intern, <a href="https://www.shlab.org.cn/">Shanghai AI Laboratory</a>, China.
+- *2021.06 - 2024*, Research Intern, <a href="https://www.shlab.org.cn/">Shanghai AI Laboratory</a>, China.
+- *2020.08 - 2020.12*, Research Intern, <a href="https://www.shlab.org.cn/">Shanghai AI Laboratory</a>, China.
