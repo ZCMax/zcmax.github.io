@@ -75,12 +75,12 @@ My current research interests lie in the <strong>Multimodal Large Language Model
 
 # 📖 Projects
 **MMDetection3D: OpenMMLab next-generation platform for general 3D perception. (Github >5k stars 🔥)**<br>
-**C0RE MAINTAINER & DEVELOPER**
-– MMDetection3D unifies the pipeline and modular design of mono3D, LiDAR-based,and multi-modality
+**C0RE MAINTAINER & DEVELOPER**<br>
+- MMDetection3D unifies the pipeline and modular design of mono3D, LiDAR-based,and multi-modality
 3D object detection.
-– It supports state-of-the-art 3D object detectors of different modalities in multiple indoor and outdoor
+- It supports state-of-the-art 3D object detectors of different modalities in multiple indoor and outdoor
 datasets.
-– It builds strong foundations,in a universal framework, for general 3D object detection.
+- It builds strong foundations,in a universal framework, for general 3D object detection.
 
 # 🎖 Honors and Awards
 - *2023.10* Runner-up of Waymo Camera-Only 3D Detection Challenge, CVPR 2022
