@@ -74,7 +74,7 @@ My current research interests lie in the <strong>Multimodal Large Language Model
 </div>
 
 # 📖 Projects
-**MMDetection3D: OpenMMLab next-generation platform for general 3D perception. (Github >5k stars 🔥)**
+**MMDetection3D: OpenMMLab next-generation platform for general 3D perception. (Github >5k stars 🔥)**<br>
 **C0RE MAINTAINER & DEVELOPER**
 – MMDetection3D unifies the pipeline and modular design of mono3D, LiDAR-based,and multi-modality
 3D object detection.
