@@ -20,7 +20,7 @@ redirect_from:
 
 I am a first-year Ph.D. student at the <a href="https://datascience.hku.hk/">HKU Musketeers Foundation Institute of Data Science (HKU-IDS)</a>, as well as HKU-MMLab, The University of Hong Kong, supervised by Prof. <a href="https://xh-liu.github.io/">Xihui Liu</a>.
 
-I received my B.Eng. Degree from the <a href="https://www.uestc.edu.cn/">University of Electronic Science and Technology of China</a> (UESTC) and MPhil Degree from <a href="https://www.cuhk.edu.cn/en">The Chinese University of Hong Kong, Shenzhen</a> (CUHK-SZ), supervieds by Prof. <a href="https://scholar.google.com/citations?user=z-rqsR4AAAAJ&hl=zh-CN">Xiaoguang Han</a>. Before joining HKU-IDS, I've spent wonderful time with great minds and interesting friends at <a href="https://www.shlab.org.cn/">Shanghai AI Laboratory</a>.
+I received my B.Eng. Degree from the <a href="https://www.uestc.edu.cn/">University of Electronic Science and Technology of China</a> (UESTC) and MPhil Degree from <a href="https://www.cuhk.edu.cn/en">The Chinese University of Hong Kong, Shenzhen</a> (CUHK-SZ), supervised by Prof. <a href="https://scholar.google.com/citations?user=z-rqsR4AAAAJ&hl=zh-CN">Xiaoguang Han</a>. Before joining HKU-IDS, I've spent wonderful time with great minds and interesting friends at <a href="https://www.shlab.org.cn/">Shanghai AI Laboratory</a>.
 
 My current research interests lie in the <strong>Multimodal Large Language Models</strong> and <strong>3D Vision and Robotics (Embodied AI)</strong>. I'm open to potential collaborations, feel free to drop me an email if you are interested in.
 
