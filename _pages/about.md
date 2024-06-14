@@ -20,7 +20,7 @@ redirect_from:
 
 I am a first-year Ph.D. student at the <a href="https://datascience.hku.hk/">HKU Musketeers Foundation Institute of Data Science (HKU-IDS)</a>, as well as HKU-MMLab, The University of Hong Kong, supervised by Prof. <a href="https://xh-liu.github.io/">Xihui Liu</a>.
 
-I received my B.Eng. Degree from the <a href="https://www.uestc.edu.cn/">University of Electronic Science and Technology of China</a> (UESTC) and MPhil Degree from <a href="https://www.cuhk.edu.cn/en">The Chinese University of Hong Kong, Shenzhen</a> (CUHK-SZ), supervised by Prof. <a href="https://scholar.google.com/citations?user=z-rqsR4AAAAJ&hl=zh-CN">Xiaoguang Han</a>. Before joining HKU-IDS, I've spent wonderful time with great minds and interesting friends at <a href="https://www.shlab.org.cn/">Shanghai AI Laboratory</a>.
+I received my B.Eng. Degree from the <a href="https://www.uestc.edu.cn/">University of Electronic Science and Technology of China</a> (UESTC) and MPhil Degree from <a href="https://www.cuhk.edu.cn/en">The Chinese University of Hong Kong, Shenzhen</a> (CUHK-Shenzhen), supervised by Prof. <a href="https://scholar.google.com/citations?user=z-rqsR4AAAAJ&hl=zh-CN">Xiaoguang Han</a>. Before joining HKU-IDS, I've spent wonderful time with great minds and interesting friends at <a href="https://www.shlab.org.cn/">Shanghai AI Laboratory</a>.
 
 My current research interests lie in the <strong>Multimodal Large Language Models</strong> and <strong>3D Vision and Robotics (Embodied AI)</strong>. I'm open to potential collaborations, feel free to drop me an email if you are interested in.
 
@@ -73,17 +73,8 @@ My current research interests lie in the <strong>Multimodal Large Language Model
 </div>
 </div>
 
-# 🎖 Honors and Awards
-- *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-
-# 📖 Educations
-- *2019.06 - 2022.04 (now)*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2015.09 - 2019.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-
-# 💬 Invited Talks
-- *2021.06*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2021.03*, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  \| [\[video\]](https://github.com/)
+# 🎖 Academic Services
+I served as a reviewer for CVPR, ICCV, ECCV, NeurIPS.
 
 # 💻 Internships
-- *2019.05 - 2020.02*, [Lorem](https://github.com/), China.
+- *2021.06 - *, Research Intern, <a href="https://www.shlab.org.cn/">Shanghai AI Laboratory</a>, China.
