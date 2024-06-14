@@ -26,8 +26,11 @@ My current research interests lie in the <strong>Multimodal Large Language Model
 
 
 # 🔥 News
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
+- *2024.06* We realse a new task: 3D reasoning grounding and benchmark: ScanReason to examine the 3D understanding ability in the era of Foundation Model.
+- *2024.06* The report of our follow-up work with the most-ever hierarchical grounded language annotations, MMScan, has been released.
+- *2024.02* We will co-organize <a href="https://opendrivelab.com/challenge2024/">Autonomous Grand Challenge</a> in CVPR 2024. Welcome to try the Multi-View 3D Visual Grounding track!
+- *2024.02*: &nbsp;🎉🎉 Our EmbodiedScan is accepted by CVPR 2024!
+
 
 # 📝 Publications 
 
