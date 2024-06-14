@@ -41,7 +41,7 @@ My current research interests lie in the <strong>Multimodal Large Language Model
     <strong>CVPR 2024</strong> <br>
     <a href="https://tai-wang.github.io/" target="_blank" rel="noopener">Tai Wang</a>*,
     <a href="https://scholar.google.com/citations?user=-zT1NKwAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Xiaohan Mao</a>*,
-    <strong><u>Chenming Zhu</u></strong>,
+    <strong><u>Chenming Zhu</u></strong>*,
     <a href="https://runsenxu.com/" target="_blank" rel="noopener">Runsen Xu</a>,
     <a href="https://openreview.net/profile?id=~Ruiyuan_Lyu1" target="_blank" rel="noopener">Ruiyuan Lyu</a>,
     <a href="https://openreview.net/profile?id=~Peisen_Li1" target="_blank" rel="noopener">Peisen Li</a>,
