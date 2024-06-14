@@ -50,14 +50,7 @@ My current research interests lie in the <strong>Multimodal Large Language Model
     <div class="section-subheading article-title mb-0 mt-0">
       <strong>EmbodiedScan: A Holistic Multi-Modal 3D Perception Suite Towards Embodied AI</strong>
     </div>
-    <!-- <a href="/publication/11_cvpr2023_omniobject3d/"  class="summary-link">
-      <div class="article-style">
-        CVPR, 2023 <strong><font color='#FF0000'> Best Paper Award Candidate, Top 12/9155</font></strong> <br> <em><strong>Tong Wu</strong>, Jiarui Zhang, <a href="https://fuxiao0719.github.io/" target="_blank" rel="noopener">Xiao Fu</a>, Yuxin Wang, <a href="https://jiawei-ren.github.io/" target="_blank" rel="noopener">Jiawei Ren</a>, <a href="https://scholar.google.com/citations?user=lSDISOcAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener">Liang Pan</a>, <a href="https://wywu.github.io/" target="_blank" rel="noopener">Wayne Wu</a>, <a href="https://scholar.google.com.hk/citations?user=jZH2IPYAAAAJ&amp;hl=en" target="_blank" rel="noopener">Lei Yang</a>, <a href="https://myownskyw7.github.io/" target="_blank" rel="noopener">Jiaqi Wang</a>, <a href="https://scholar.google.com/citations?user=AerkT0YAAAAJ&amp;hl=zh-CN" target="_blank" rel="noopener">Chen Qian</a>, <a href="http://dahua.me/" target="_blank" rel="noopener">Dahua Lin</a>, <a href="https://liuziwei7.github.io/" target="_blank" rel="noopener">Ziwei Liu</a></em>
-      </div>
-    </a> -->
-    <!-- <a href="/publication/11_cvpr2023_omniobject3d/"  class="summary-link"> -->
     <div class="article-style">
-      <!-- <strong>CVPR 2024, <font color='#FF0000'> <a href="https://opendrivelab.com/challenge2024/" target="_blank" rel="noopener">Challenge at CVPR 2024 Workshop works in process!</a></font></strong> <br> -->
       <strong>CVPR 2024</strong> <br>
       <a href="https://tai-wang.github.io/" target="_blank" rel="noopener">Tai Wang</a>*,
       <a href="https://scholar.google.com/citations?user=-zT1NKwAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Xiaohan Mao</a>*,
@@ -74,7 +67,6 @@ My current research interests lie in the <strong>Multimodal Large Language Model
       <a href="http://dahua.site/" target="_blank" rel="noopener">Dahua Lin</a>,
       <a href="https://oceanpang.github.io/" target="_blank" rel="noopener">Jiangmiao Pang</a>†
     </div>
-    </a>
     <div class="stream-meta article-metadata"> 
     </div>
     <div class="btn-links">
