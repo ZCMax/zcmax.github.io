@@ -203,33 +203,12 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
-          </p>
+          Although great progress has been made in 3D visual grounding, current models still rely on explicit textual descriptions for grounding and lack the ability to reason human intentions from implicit instructions.
+          We propose a new task called <strong>3D Reasoning Grounding</strong> and introduce a new benchmark <strong>ScanReason</strong> which provides over 10K question-answer-location pairs from five reasoning types that 
+          require the synerization of reasoning and grounding. This benchmark challenges models to conduct joint reasoning on questions and the 3D environment before predicting the 3D locations of target objects. 
+          We further design our approach, <strong>ReGround3D</strong>, composed of the visual-centric reasoning module empowered by Multi-modal Large Language Model (MLLM) and the 3D grounding module to obtain accurate object locations by 
+          looking back to the enhanced geometry and fine-grained details from the 3D scenes. A chain-of-grounding mechanism is proposed to further boost the performance with interleaved reasoning and grounding steps during inference. 
+          Extensive experiments on the proposed benchmark validate the effectiveness of our proposed approach.
         </div>
       </div>
     </div>
@@ -246,6 +225,20 @@
       </div>
     </div>
     <!--/ Paper video. -->
+
+    <!-- Method -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <img src="./static/images/pipeline5.png"
+                    alt="ReGround3D method" 
+                    loading="lazy">
+        </div>
+      </div>
+    </div>
+    <!--/ Method -->
+
   </div>
 </section>
 
