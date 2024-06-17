@@ -76,6 +76,41 @@ My current research interests lie in the <strong>Multimodal Large Language Model
 </div>
 </div>
 
+<div class='paper-box'><div class='paper-box-image'><div><img src='images/mmscan/MMScan_teaser.png' alt="MMScan: A Multi-Modal 3D Scene Dataset with Hierarchical Grounded Language Annotations" loading="lazy" width="90%"></div></div>
+<div class='paper-box-text' markdown="1">
+  <div class="section-subheading article-title mb-0 mt-0">
+    <strong>MMScan: A Multi-Modal 3D Scene Dataset with Hierarchical Grounded Language Annotations</strong>
+  </div>
+  <div class="article-style">
+    <strong>Arxiv preprint</strong> <br>
+    <a href="https://openreview.net/profile?id=~Ruiyuan_Lyu1" target="_blank" rel="noopener">Ruiyuan Lyu</a>*,
+    <a href="https://tai-wang.github.io/" target="_blank" rel="noopener">Tai Wang</a>*,
+    <a href="https://scholar.google.com/citations?user=-zT1NKwAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Jingli Lin</a>*,
+    <a href="https://scholar.google.com/citations?user=-zT1NKwAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Shuai Yang</a>*,
+    <a href="https://scholar.google.com/citations?user=-zT1NKwAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Xiaohan Mao</a>,
+    <a href="https://scholar.google.com/citations?user=-zT1NKwAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Yilun Chen</a>, 
+    <a href="https://runsenxu.com/" target="_blank" rel="noopener">Runsen Xu</a>,
+    <a href="https://runsenxu.com/" target="_blank" rel="noopener">Haifeng Huang</a>,
+    <strong><u>Chenming Zhu</u></strong>*,
+    <a href="http://dahua.site/" target="_blank" rel="noopener">Dahua Lin</a>,
+    <a href="https://oceanpang.github.io/" target="_blank" rel="noopener">Jiangmiao Pang</a>†
+  </div>
+  <div class="stream-meta article-metadata"> 
+  </div>
+  <br>
+  <div class="btn-links">
+    <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://tai-wang.github.io/mmscan/" target="_blank" rel="noopener">
+      Project Page
+    </a>
+    <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://arxiv.org/pdf/2406.09401" target="_blank" rel="noopener">
+      arXiv
+    </a>
+    <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://github.com/OpenRobotLab/EmbodiedScan" target="_blank" rel="noopener">
+      Code & Data
+  </div>
+</div>
+</div>
+
 # 📖 Projects
 **MMDetection3D: OpenMMLab next-generation platform for general 3D perception. (Github >5k stars 🔥)**<br>
 **C0RE MAINTAINER & DEVELOPER**<br>
