@@ -59,9 +59,9 @@ My current research interests lie in the <strong>Multimodal Large Language Model
     </a>
   </div>
 </div>
-</div>
 
-<div class='paper-box'><div class='paper-box-image'><div><img src='images/mmscan/MMScan_teaser.png' alt="MMScan: A Multi-Modal 3D Scene Dataset with Hierarchical Grounded Language Annotations" loading="lazy" width="90%"></div></div>
+
+<div class='paper-box-image'><div><img src='images/mmscan/MMScan_teaser.png' alt="MMScan: A Multi-Modal 3D Scene Dataset with Hierarchical Grounded Language Annotations" loading="lazy" width="90%"></div></div>
 <div class='paper-box-text' markdown="1">
   <div class="section-subheading article-title mb-0 mt-0">
     <strong>MMScan: A Multi-Modal 3D Scene Dataset with Hierarchical Grounded Language Annotations</strong>
@@ -95,9 +95,9 @@ My current research interests lie in the <strong>Multimodal Large Language Model
     </a>
   </div>
 </div>
-</div>
 
-<div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2024</div><img src='images/2024_cvpr_embodiedscan/embodiedscan.gif' alt="EmbodiedScan: A Holistic Multi-Modal 3D Perception Suite Towards Embodied AI" loading="lazy" width="90%"></div></div>
+
+<div class='paper-box-image'><div><div class="badge">CVPR 2024</div><img src='images/2024_cvpr_embodiedscan/embodiedscan.gif' alt="EmbodiedScan: A Holistic Multi-Modal 3D Perception Suite Towards Embodied AI" loading="lazy" width="90%"></div></div>
 <div class='paper-box-text' markdown="1">
   <div class="section-subheading article-title mb-0 mt-0">
     <strong>EmbodiedScan: A Holistic Multi-Modal 3D Perception Suite Towards Embodied AI</strong>
