@@ -205,7 +205,7 @@
         <div class="content has-text-justified">
           Although great progress has been made in 3D visual grounding, current models still rely on explicit textual descriptions for grounding and lack the ability to reason human intentions from implicit instructions.
           We propose a new task called <strong>3D Reasoning Grounding</strong> and introduce a new benchmark <strong>ScanReason</strong> which provides over 10K question-answer-location pairs from five reasoning types that 
-          require the synerization of reasoning and grounding. This benchmark challenges models to conduct joint reasoning on questions and the 3D environment before predicting the 3D locations of target objects. 
+          require the synerization of reasoning and grounding.  
           We further design our approach, <strong>ReGround3D</strong>, composed of the visual-centric reasoning module empowered by Multi-modal Large Language Model (MLLM) and the 3D grounding module to obtain accurate object locations by 
           looking back to the enhanced geometry and fine-grained details from the 3D scenes. A chain-of-grounding mechanism is proposed to further boost the performance with interleaved reasoning and grounding steps during inference. 
           Extensive experiments on the proposed benchmark validate the effectiveness of our proposed approach.
@@ -215,7 +215,7 @@
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
+    <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
         <div class="publication-video">
@@ -223,7 +223,7 @@
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Paper video. -->
 
     <!-- Method -->
@@ -234,6 +234,17 @@
           <img src="./static/images/pipeline5.png"
                     alt="ReGround3D method" 
                     loading="lazy">
+          <img src="./static/images/cog2.png"
+          alt="Chain of Grounding" 
+          loading="lazy">
+          <h2 class="subtitle has-text-centered">
+            We propose <strong>ReGround3D</strong> consisting of a visual-centric reasoning module and a 3D grounding module with geometry-enhanced look-back. 
+            The visual-centric reasoning module performs joint reasoning of language instruction and visual scene, and predicts a special <LOC> token representing the grounding information.
+            The 3D grounding module looks back to the original 3D scene with comprehensive geometry information and fine-grained details. It takes the hidden embedding of the <LOC> token 
+            containing grounding-related information from the 3D features, and eventually predicts the 3D locations of the target objects. 
+            Furthermore, we propose <strong>Chain-of-Grounding mechanism (CoG)</strong>, a chain of interleaved reasoning and grounding steps, to further synergize the grounding and 
+            reasoning capability for the 3D reasoning gruonding task.
+          </h2>
         </div>
       </div>
     </div>
@@ -298,13 +309,13 @@
   </div>
 </section> -->
 
-<section class="section">
+<!-- <section class="section">
   <div class="container is-max-desktop">
 
-    <div class="columns is-centered">
+    <div class="columns is-centered"> -->
 
       <!-- Visual Effects. -->
-      <div class="column">
+      <!-- <div class="column">
         <div class="content">
           <h2 class="title is-3">Visual Effects</h2>
           <p>
@@ -316,11 +327,11 @@
                     type="video/mp4">
           </video>
         </div>
-      </div>
+      </div> -->
       <!--/ Visual Effects. -->
 
       <!-- Matting. -->
-      <div class="column">
+      <!-- <div class="column">
         <h2 class="title is-3">Matting</h2>
         <div class="columns is-centered">
           <div class="column content">
@@ -336,16 +347,16 @@
 
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Matting. -->
 
     <!-- Animation. -->
-    <div class="columns is-centered">
+    <!-- <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
+        <h2 class="title is-3">Animation</h2> -->
 
         <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
+        <!-- <h3 class="title is-4">Interpolating states</h3>
         <div class="content has-text-justified">
           <p>
             We can also animate the scene by interpolating the deformation latent codes of two input
@@ -375,11 +386,11 @@
             <p class="is-bold">End Frame</p>
           </div>
         </div>
-        <br/>
+        <br/> -->
         <!--/ Interpolating. -->
 
         <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
+        <!-- <h3 class="title is-4">Re-rendering the input video</h3>
         <div class="content has-text-justified">
           <p>
             Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
@@ -397,15 +408,15 @@
                     type="video/mp4">
           </video>
         </div>
-        <!--/ Re-rendering. -->
+        / Re-rendering.
 
       </div>
-    </div>
+    </div> -->
     <!--/ Animation. -->
 
 
     <!-- Concurrent Work. -->
-    <div class="columns is-centered">
+    <!-- <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Related Links</h2>
 
@@ -428,11 +439,11 @@
           </p>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Concurrent Work. -->
 
-  </div>
-</section>
+  <!-- </div>
+</section> -->
 
 
 <section class="section" id="BibTeX">
