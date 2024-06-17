@@ -51,7 +51,7 @@ My current research interests lie in the <strong>Multimodal Large Language Model
   </div>
   <br>
   <div class="btn-links">
-    <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://tai-wang.github.io/embodiedscan/" target="_blank" rel="noopener">
+    <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://zcmax.github.io/projects/ReGround3D/" target="_blank" rel="noopener">
       Project Page
     </a>
     <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://arxiv.org/abs/2312.16170" target="_blank" rel="noopener">
