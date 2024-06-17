@@ -34,13 +34,40 @@ My current research interests lie in the <strong>Multimodal Large Language Model
 
 # 📝 Publications 
 
+<div class='paper-box'><div class='paper-box-image'><div><img src='images/2024_eccv_reground3d/scanreason.png' alt="Empowering 3D Visual Grounding with Reasoning Capabilities" loading="lazy" width="90%"></div></div>
+<div class='paper-box-text' markdown="1">
+  <div class="section-subheading article-title mb-0 mt-0">
+    <strong>Empowering 3D Visual Grounding with Reasoning Capabilities</strong>
+  </div>
+  <div class="article-style">
+    <i>Arxiv preprint</i> <br>
+    <strong><u>Chenming Zhu</u></strong>,
+    <a href="https://tai-wang.github.io/" target="_blank" rel="noopener">Tai Wang</a>,
+    <a href="https://zhangwenwei.cn/" target="_blank" rel="noopener">Wenwei Zhang</a>,
+    <a href="https://chenkai.site/" target="_blank" rel="noopener">Kai Chen</a>,
+    <a href="https://xh-liu.github.io/" target="_blank" rel="noopener">Xihui Liu</a>,
+  </div>
+  <div class="stream-meta article-metadata"> 
+  </div>
+  <br>
+  <div class="btn-links">
+    <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://tai-wang.github.io/embodiedscan/" target="_blank" rel="noopener">
+      Project Page
+    </a>
+    <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://arxiv.org/abs/2312.16170" target="_blank" rel="noopener">
+      arXiv
+    </a>
+  </div>
+</div>
+</div>
+
 <div class='paper-box'><div class='paper-box-image'><div><img src='images/mmscan/MMScan_teaser.png' alt="MMScan: A Multi-Modal 3D Scene Dataset with Hierarchical Grounded Language Annotations" loading="lazy" width="90%"></div></div>
 <div class='paper-box-text' markdown="1">
   <div class="section-subheading article-title mb-0 mt-0">
     <strong>MMScan: A Multi-Modal 3D Scene Dataset with Hierarchical Grounded Language Annotations</strong>
   </div>
   <div class="article-style">
-    <strong>Arxiv preprint</strong> <br>
+    <i>Arxiv preprint</i> <br>
     <a href="https://openreview.net/profile?id=~Ruiyuan_Lyu1" target="_blank" rel="noopener">Ruiyuan Lyu</a>*,
     <a href="https://tai-wang.github.io/" target="_blank" rel="noopener">Tai Wang</a>*,
     <a href="https://scholar.google.com/citations?user=-zT1NKwAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Jingli Lin</a>*,
@@ -49,7 +76,7 @@ My current research interests lie in the <strong>Multimodal Large Language Model
     <a href="https://scholar.google.com/citations?user=-zT1NKwAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Yilun Chen</a>, 
     <a href="https://runsenxu.com/" target="_blank" rel="noopener">Runsen Xu</a>,
     <a href="https://runsenxu.com/" target="_blank" rel="noopener">Haifeng Huang</a>,
-    <strong><u>Chenming Zhu</u></strong>*,
+    <strong><u>Chenming Zhu</u></strong>,
     <a href="http://dahua.site/" target="_blank" rel="noopener">Dahua Lin</a>,
     <a href="https://oceanpang.github.io/" target="_blank" rel="noopener">Jiangmiao Pang</a>†
   </div>
@@ -76,7 +103,7 @@ My current research interests lie in the <strong>Multimodal Large Language Model
     <strong>EmbodiedScan: A Holistic Multi-Modal 3D Perception Suite Towards Embodied AI</strong>
   </div>
   <div class="article-style">
-    <strong>CVPR 2024</strong> <br>
+    <i>IEEE Conference on Computer Vision and Pattern Recognition (CVPR) 2024</i> <br>
     <a href="https://tai-wang.github.io/" target="_blank" rel="noopener">Tai Wang</a>*,
     <a href="https://scholar.google.com/citations?user=-zT1NKwAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener">Xiaohan Mao</a>*,
     <strong><u>Chenming Zhu</u></strong>*,
