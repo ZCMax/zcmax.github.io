@@ -34,7 +34,7 @@ My current research interests lie in the <strong>Multimodal Large Language Model
 
 # 📝 Publications 
 
-<div class='paper-box'><div class='paper-box-image'><div><img src='images/2024_eccv_reground3d/scanreason.png' alt="Empowering 3D Visual Grounding with Reasoning Capabilities" loading="lazy" width="90%"></div></div>
+<div class='paper-box'><div class='paper-box-image'><div class="badge">ECCV 2024</div><div><img src='images/2024_eccv_reground3d/scanreason.png' alt="Empowering 3D Visual Grounding with Reasoning Capabilities" loading="lazy" width="90%"></div></div>
 <div class='paper-box-text' markdown="1">
   <div class="section-subheading article-title mb-0 mt-0">
     <strong>Empowering 3D Visual Grounding with Reasoning Capabilities</strong>
@@ -51,11 +51,14 @@ My current research interests lie in the <strong>Multimodal Large Language Model
   </div>
   <br>
   <div class="btn-links">
-    <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://zcmax.github.io/projects/ReGround3D/" target="_blank" rel="noopener">
+    <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://zcmax.github.io/projects/ScanReason/" target="_blank" rel="noopener">
       Project Page
     </a>
-    <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://arxiv.org/abs/2312.16170" target="_blank" rel="noopener">
+    <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://arxiv.org/abs/2407.01525" target="_blank" rel="noopener">
       arXiv
+    </a>
+    <a class="btn btn-outline-primary btn-page-header btn-sm" href="https://github.com/ZCMax/ScanReason" target="_blank" rel="noopener">
+      Code & Data [Coming Soon]
     </a>
   </div>
 </div>
