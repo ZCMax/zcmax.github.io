@@ -87,9 +87,12 @@
             <span class="author-block">
               <a href="https://zcmax.github.io/">Chenming Zhu</a><sup>1,2</sup>,</span>
             <span class="author-block">
-              <a href="https://tai-wang.github.io/">Tai Wang</a><sup>2</sup>,</span>
+              <a href="https://tai-wang.github.io/">Tai Wang</a><sup>2*</sup>,</span>
             <span class="author-block">
               <a href="https://zhangwenwei.cn/">Wenwei Zhang</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://zhangwenwei.cn/">Jiangmiao Pang</a><sup>2</sup>,
             </span>
             <span class="author-block">
               <a href="https://xh-liu.github.io/">Xihui Liu</a><sup>1*</sup>
@@ -160,21 +163,20 @@
   </div>
 </section>
 
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="./static/images/3d_reasoning_grounding.png"
+      <img src="./static/images/llava-3d-teaser-combine-v2.png"
            alt="3D Reasoning Grounding" 
            loading="lazy">
       <h2 class="subtitle has-text-centered">
-        We propose a new task: 3D Reasoning Grounding task, focusing the reasoning grounding in 3D scene. Given a 3D scene and an implicit free-form query, 
-        3D reasoning grounding requires the model to predict the 3D bounding boxes of the target objects as well as the textual answers and explanations.
+        LLaVA-3D
       </h2>
     </div>
   </div>
-</section>
+</section> -->
 
-<section class="section">
+<!-- <section class="section">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <img src="./static/images/scanreason_benchmark.png"
@@ -189,11 +191,11 @@
       </h2>
     </div>
   </div>
-</section>
+</section> -->
 
 
 
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
   
     <div class="hero-body">
@@ -203,7 +205,7 @@
       </video>
     </div>
   </div>
-</section>
+</section> -->
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -212,12 +214,13 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          Although great progress has been made in 3D visual grounding, current models still rely on explicit textual descriptions for grounding and lack the ability to reason human intentions from implicit instructions.
-          We propose a new task called <strong>3D Reasoning Grounding</strong> and introduce a new benchmark <strong>ScanReason</strong> which provides over 10K question-answer-location pairs from five reasoning types that 
-          require the synerization of reasoning and grounding.  
-          We further design our approach, <strong>ReGround3D</strong>, composed of the visual-centric reasoning module empowered by Multi-modal Large Language Model (MLLM) and the 3D grounding module to obtain accurate object locations by 
-          looking back to the enhanced geometry and fine-grained details from the 3D scenes. A chain-of-grounding mechanism is proposed to further boost the performance with interleaved reasoning and grounding steps during inference. 
-          Extensive experiments on the proposed benchmark validate the effectiveness of our proposed approach.
+          Recent advancements in Large Multimodal Models (LMMs) have greatly enhanced their proficiency in 2D visual understanding tasks, enabling them to effectively process and understand images and videos. 
+          However, the development of LMMs with 3D-awareness for 3D scene understanding has been hindered by the lack of large-scale 3D vision-language datasets and powerful 3D encoders. In this paper, 
+          we introduce a simple yet effective framework called \textbf{LLaVA-3D}. Leveraging the strong 2D understanding priors from LLaVA, our LLaVA-3D efficiently adapts LLaVA for 3D scene understanding 
+          without compromising 2D understanding capabilities. To achieve this, we employ a simple yet effective representation, \textbf{3D Patch}, which connects 2D CLIP patch features with their corresponding 
+          positions in 3D space. By integrating the 3D Patches into 2D LMMs and employing joint 2D and 3D vision-language instruction tuning, we establish a unified architecture for both 2D image understanding 
+          and 3D scene understanding. Experimental results show that LLaVA-3D converges 3.5$\times$ faster than existing 3D LMMs when trained on 3D vision-language datasets. 
+          Moreover, LLaVA-3D not only achieves state-of-the-art performance across various 3D tasks but also maintains comparable 2D image understanding and vision-language conversation capabilities with LLaVA.
         </div>
       </div>
     </div>
@@ -238,31 +241,37 @@
     <!-- Method -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Method</h2>
+        <h2 class="title is-3">Overview of LLaVA-3D</h2>
         <div class="hero-body">
-          <img src="./static/images/method2.png"
-               alt="ReGround3D method" 
+          <img src="./static/images/llava-3d-teaser-combine-v2.png"
+               alt="Overview of LLaVA-3D" 
                loading="lazy">
           <div class="content has-text-justified">
-            We propose <strong>ReGround3D</strong> consisting of a visual-centric reasoning module and a 3D grounding module with geometry-enhanced look-back. 
-            The visual-centric reasoning module performs joint reasoning of language instruction and visual scene, and predicts a special <strong>&lt;LOC&gt;</strong> token representing the grounding information.
-            The 3D grounding module looks back to the original 3D scene with comprehensive geometry information and fine-grained details. It takes the hidden embedding of the <strong>&lt;LOC&gt;</strong> token 
-            containing grounding-related information from the 3D features, and eventually predicts the 3D locations of the target objects. 
-          </div>
-        </div>
-        <div class="hero-body">
-          <img src="./static/images/cog2.png"
-              alt="CoG" 
-              loading="lazy">
-          <div class="content has-text-justified">
-            Furthermore, we propose <strong>Chain-of-Grounding mechanism (CoG)</strong>, a chain of interleaved reasoning and grounding steps, to further synergize the grounding and 
-            reasoning capability for the 3D reasoning gruonding task.
+            Block (a) shows that LLaVA-3D could perform both 2D and 3D vision-language tasks. The left block (b) shows that compared with previous 3D LMMs,
+            our LLaVA-3D achieves state-of-the-art performance across a wide range of 3D benchmarks while maintaining a comparable performance on various 2D benchmarks compared with LLaVA-1.5. 
+            The middle block (c) demonstrates that LLaVA-3D is built on the 2D LMM: LLaVA, and leverages 3D patches to endow it with 3D spatial awareness, 
+            enabling it to perform various 3D vision-and-language tasks in the physical world. The right blocks (d) and (e) highlights the significantly faster convergence and inference speeds 
+            of LLaVA-3D compared to existing 3D LMMs.
           </div>
         </div>
       </div>
     </div>
     <!--/ Method -->
-
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">LLaVA-3D Architecture</h2>
+        <div class="hero-body">
+          <img src="./static/images/llava-3d-method-v12.png"
+               alt="LLaVA-3D Architecture" 
+               loading="lazy">
+          <div class="content has-text-justified">
+            LLaVA-3D Architecture. Based on LLaVA, we directly add the corresponding 3D position embeddings to 2D patch visual tokens
+            of multi-view images to construct the 3D Patches, then the 3D Patches will undergo 3D pooling and be sent into the projection layer of
+            LLaVA to map into the LLM space and align with the LLM using 3D-visual-language data.
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
