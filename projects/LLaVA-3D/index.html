@@ -328,31 +328,33 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Emerging Capabilities</h2>
+        <h2 class="title is-3">Multimodal Capabilities</h2>
         <div class="content has-text-justified">
         <p>
-        In addition to reporting the LLaVA-OneVision’s capabilities across various benchmarks, we also observe the emerging behaviors of the proposed model with task transfer and composition, paving a promising way to generalize to tackle real-world computer vision tasks in the wild. We illustrate several emerging capabilities using examples as below.
+        Our LLaVA-3D exhibits powerful 3D understanding and reasoning capability. Based on 2D multi-view image observation, LLaVA-3D enables the user-friendly interaction with the 3D scene across various 3D understanding and reasoning tasks. It allows
+        the users to just click on the 2D images or the video frame to simply obtain the corresponding 3D object caption or 3D bounding boxes.
+        
       </p>
         <div id="results-carousel" class="carousel results-carousel">
 
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/demo1.png" alt="3d dense captioning" width="100%"/>
-              <p> LLaVA-OneVision transfers its ability to understand diagram and table to multi-image scenarios, interpreting multiple images in a coherent manner.
+              <img src="./static/images/demo1.png" alt="3d dense captioning" width="100%"/>
+              <p> LLaVA-3D could perform 2D Click-based 3D dense captioning, generating the corresponding object caption and 3D bounding box.
             </div>
           </div>
 
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/demo2.png" alt="3d question answering" width="80%"/>
-              <p> LLaVA-OneVision plays the role of agent. It recognizes multiple screenshots on the iPhone and take action to interact with the iPhone, providing operation instructions for automating tasks.
+              <img src="./static/images/demo2.png" alt="3d question answering" width="80%"/>
+              <p> LLaVA-3D could perform 2D Click-based 3D question answering, now users could click on the 2D images and ask the question.
             </div>
           </div>
 
           <div class="box m-5">
             <div class="content has-text-centered">
-              <img src="static/images/demo3.png" alt="3d visual grounding" width="100%"/>
-              <p> LLaVA-OneVision exhibits excellent set-of-mark prompting capabilities, ie, referring to marks when answering questions. This example demonstrates that describing specific objects based on numerical labels within an image highlights its comprehension skills in handling fine-grained visual content.
+              <img src="./static/images/demo3.png" alt="3d visual grounding" width="100%"/>
+              <p> LLaVA-3D exhibits powerful 3D visual grounding capability, enabling accurate 3D bounding boxes output.
             </div>
           </div>
       </div>
