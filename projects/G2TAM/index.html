@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Depth Anything 3: Recovering the Visual Space from Any Views</title>
+    <title>G<sup>2</sup>TAM: Geometry Grounded Track Anything Model</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -49,7 +49,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <h2>Depth Anything 3</h2>
+                <h2>G<sup>2</sup>TAM</h2>
             </div>
             <div class="nav-links">
                 <a href="#overview">Overview</a>
@@ -66,21 +66,22 @@
     <section class="banner">
         <div class="banner-content">
             <div class="banner-text">
-                <h2 class="banner-title">Depth Anything 3</h2>
-                <h3 class="banner-subtitle">Recovering the Visual Space from Any Views</h3>
+                <h2 class="banner-title">G<sup>2</sup>TAM</h2>
+                <h3 class="banner-subtitle">Geometry Grounded Track Anything Model</h3>
                 <div class="authors">
-                    <a href="https://haotongl.github.io/" target="_blank" >Haotong Lin<sup>*</sup></a>,
-                    <a href="https://github.com/SiliChen321" target="_blank">Sili Chen<sup>*</sup></a>,
-                    <a href="https://liewjunhao.github.io/" target="_blank">Jun Hao Liew<sup>*</sup></a>,
-                    <a href="https://donydchen.github.io" target="_blank">Donny Y. Chen<sup>*</sup></a>,
-                    <a href="https://zhyever.github.io/" target="_blank">Zhenyu Li</a>,
-                    <a href="https://scholar.google.com/citations?user=MjXxWbUAAAAJ" target="_blank">Guang Shi</a>,
-                    <a href="https://scholar.google.com/citations?user=Q8iay0gAAAAJ" target="_blank">Jiashi Feng</a>,
-                    <br>
-                    <a href="https://bingykang.github.io/" target="_blank">Bingyi Kang<sup>*</sup>&dagger;</a>
+                    <a href="https://haotongl.github.io/" target="_blank" >Chenming Zhu</a>,
+                    <a href="https://github.com/SiliChen321" target="_blank">Peizhou Cao</a>,
+                    <a href="https://liewjunhao.github.io/" target="_blank">Jingli Lin</a>,
+                    <a href="https://donydchen.github.io" target="_blank">Wenbo Hu</a>,
+                    <a href="https://zhyever.github.io/" target="_blank">Yunlong Ran</a>,
+                    <a href="https://scholar.google.com/citations?user=MjXxWbUAAAAJ" target="_blank">Jiangmiao Pang</a>,
+                    <a href="https://scholar.google.com/citations?user=MjXxWbUAAAAJ" target="_blank">Tai Wang&dagger;</a>,
+                    <a href="https://scholar.google.com/citations?user=Q8iay0gAAAAJ" target="_blank">Xihui Liu<sup>*</sup></a>
+                    <!-- <br>
+                    <a href="https://bingykang.github.io/" target="_blank">Bingyi Kang<sup>*</sup>&dagger;</a> -->
 
                     <br><br>
-                    &dagger;Proejct Lead, *Equal Contribution
+                    &dagger;Proejct Lead, *Corresponding Author
                 </div>
 
                 <div class="banner-links">
@@ -111,37 +112,21 @@
                 <p>
                     <i class="fas fa-bolt"></i> <strong>TL;DR:</strong> 
                     <!-- Depth Anything 3 turns any visual input into superior geometry and 3DGS rendering. <br> -->
-                    Depth Anything 3 recovers the space with superior geometry and 3DGS rendering from any visual inputs. <br>
+                    <!-- Depth Anything 3 recovers the space with superior geometry and 3DGS rendering from any visual inputs. <br>
                     <strong>The secret?</strong> No complex tasks! No special architecture! <br>
-                    just a single, plain transformer trained with a depth-ray representation.
+                    just a single, plain transformer trained with a depth-ray representation. -->
                     <!-- Radical simplicity: just a single, plain transformer trained with a depth-ray representation. -->
                     <!-- Depth Anything 3 recovers the visual space from arbitrary visual inputs,<br> -->
                     <!-- delivering leading geometry (camera poses, depth maps) and 3DGS rendering quality. -->
+                    G<sup>2</sup>TAM supports various prompts—including text, point, and box prompts—to perform joint 3D reconstruction and spatial–temporal consistent instance segmentation, enabling promptable instance tracking in 3D space.
                 </p>
             </div>
-            <div class="demo-video-container">
-                <!-- Loading Indicator -->
-                <div class="video-loader" id="mainVideoLoader">
-                    <div class="loader-spinner"></div>
-                    <div class="loader-text">Loading video...</div>
-                    <div class="loader-progress">
-                        <div class="progress-bar" id="mainVideoProgress"></div>
-                    </div>
-                </div>
-                <!-- Main Video -->
-                <video 
-                    class="main-video lazy-video" 
-                    id="mainVideo"
-                    playsinline 
-                    muted 
-                    autoplay 
-                    loop
-                    preload="metadata"
-                    data-src="./assets/teaser_compress.mp4"
-                    poster="./assets/teaser_poster.jpg">
-                    <source data-src="./assets/teaser_compress.mp4" type="video/mp4">
-                    Your browser does not support video playback.
-                </video>
+        </div>
+        <div class="container">
+            <div class="abstract-content" style="text-align: center;"> <h3><i class="fas fa-play-circle"></i> Demo</h3>
+                
+                <img src="assets/sam2+depthanything.gif" alt="G2TAM Demo" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+
             </div>
         </div>
     </section>
@@ -151,8 +136,37 @@
         <div class="container">
             <div class="abstract-content" style="text-align: left;">
                 <h3><i class="fas fa-file-alt"></i> Abstract</h3>
-                <p>We present Depth Anything 3 (DA3), a model that predicts spatially consistent geometry from an arbitrary number of visual inputs, with or without known camera poses. In pursuit of minimal modeling, DA3 yields two key insights: a single plain transformer (e.g., vanilla DINOv2 encoder) is sufficient as a backbone without architectural specialization, and a singular depth-ray prediction target obviates the need for complex multi-task learning. Through our teacher-student training paradigm, the model achieves a level of detail and generalization on par with Depth Anything 2 (DA2). We establish a new visual geometry benchmark covering camera pose estimation, any-view geometry and visual rendering. On this benchmark, DA3 sets a new state-of-the-art across all tasks, surpassing prior SOTA VGGT by an average of 35.7% in camera pose accuracy and 23.6% in geometric accuracy. Moreover, it outperforms DA2 in monocular depth estimation. All models are trained exclusively on public academic datasets.</p>
-                <img src="assets/teaser.png" alt="Performance Comparison Chart" style="width: 100%; height: auto; margin-top: 0px; border-radius: 8px;">
+                <p>Human spatial understanding arises from jointly perceiving geometry and semantics, enabling consistent object identification and localization across viewpoints and time.  
+                    Current video segmentation models depend on explicit object appearance memory banks for instance tracking, yet they remain vulnerable to large viewpoint changes and long-term occlusions.  
+                    Leveraging the spatial consistency afforded by modern feed-forward 3D reconstruction models, we propose the G<sup>2</sup>TAM, a unified framework for promptable instance tracking in 3D using only unordered RGB images or videos.  
+                    G<sup>2</sup>TAM employs spatially aligned geometric representations as implicit memory, ensuring stable instance identity and localization across frames and views.  
+                    At its core is a cross-modal spatial encoder that integrates visual and textual prompts into a shared geometric space, enabling end-to-end spatial reconstruction and instance-consistent mask prediction.  
+                    To support training and evaluation, we construct InsTrack, a large-scale dataset with a dedicated validation split for benchmarking.  
+                    Extensive experiments show that G<sup>2</sup>TAM delivers strong cross-view consistency, promptable instance spatial tracking, video object segmentation and spatial reconstruction, establishing a foundation for interactive, geometry-grounded spatial reasoning.</p>
+                <br>
+                <img src="assets/teaser_v2.jpeg" alt="Performance Comparison Chart" style="width: 100%; height: auto; margin-top: 0px; border-radius: 8px;">
+            </div>
+        </div>
+    </section>
+
+    <section id="gif-demo" class="abstract">
+        <div class="container">
+            <div class="abstract-content" style="text-align: center;"> <h3><i class="fas fa-file-pdf"></i> Method</h3>
+                <p>At the core of G<sup>2</sup>TAM is the idea of <strong>Geometry as Implicit Memory</strong>. To our knowledge, we are the first work to use the spatially aligned geometric representation as the underlying persistent memory for object identity.
+                    Instead of relying on explicit temporal storage, G<sup>2</sup>TAM embeds text/visual prompts directly into a unified geometric semantic representation through a <strong>simple yet highly effective cross-modal spatial encoder</strong>simple yet highly effective cross-modal spatial encoder.</p>
+                <br>
+                <img src="assets/model_v4.jpeg" alt="G2TAM Demo" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+
+            </div>
+        </div>
+    </section>
+
+    <section id="gif-demo" class="abstract">
+        <div class="container">
+            <div class="abstract-content" style="text-align: center;"> <h3><i class="fas fa-play-circle"></i>Demo</h3>
+                
+                <img src="assets/sam2+depthanything.gif" alt="G2TAM Demo" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+
             </div>
         </div>
     </section>
