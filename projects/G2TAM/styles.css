@@ -15,7 +15,7 @@
     --text-muted: #94a3b8;
     --accent-primary: #3b82f6;
     --accent-secondary: #8b5cf6;
-    --accent-gradient: linear-gradient(135deg, #3b82f6, #8b5cf6);
+    --accent-gradient: linear-gradient(135deg, #5ca9e1, #4657c8);
     --blue-skies: linear-gradient(to right, rgb(86, 204, 242), rgb(47, 128, 237));
     --roseanna: linear-gradient(to right, rgb(255, 175, 189), rgb(255, 195, 160));
     /* --radar: linear-gradient(to right, rgb(167, 112, 239), rgb(207, 139, 243), rgb(253, 185, 155)); */
@@ -123,7 +123,7 @@ section {
 
 /* Banner */
 .banner {
-    background: var(--jshine);
+    background: var(--accent-gradient);
     color: white;
     padding: 100px 0 60px;
     text-align: center;
