@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chenming Zhu | Homepage</title>
+    <meta
+      name="description"
+      content="Homepage of Chenming Zhu, Ph.D. Student at The University of Hong Kong, working on Multimodal Large Language Models and 3D Vision and Robotics."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&amp;family=Poppins:wght@500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #faf9f5;
+        --ink: #141413;
+        --muted: #b0aea5;
+        --rule: #e8e6dc;
+        --surface: #f3f1ea;
+        --orange: #d97757;
+        --blue: #6a9bcc;
+        --green: #788c5d;
+        --max: 64rem;
+        --transition: 160ms ease;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Lora", Georgia, serif;
+        line-height: 1.72;
+        text-rendering: optimizeLegibility;
+      }
+
+      a {
+        color: inherit;
+        text-decoration-color: color-mix(in srgb, var(--orange) 45%, transparent);
+        text-decoration-thickness: 0.08em;
+        text-underline-offset: 0.18em;
+        transition:
+          color var(--transition),
+          background-color var(--transition),
+          border-color var(--transition),
+          transform var(--transition),
+          text-decoration-color var(--transition);
+      }
+
+      a:hover {
+        color: var(--orange);
+        text-decoration-color: currentColor;
+      }
+
+      a:focus-visible {
+        outline: 3px solid color-mix(in srgb, var(--orange) 55%, white);
+        outline-offset: 3px;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .page {
+        width: min(calc(100% - 1.5rem), 64rem);
+        margin: 0 auto;
+        padding: clamp(2rem, 6vw, 3rem) 0 5rem;
+      }
+
+      .document {
+        max-width: var(--max);
+        margin: 0 auto;
+      }
+
+      .masthead,
+      section,
+      footer {
+        border-top: 1px solid var(--rule);
+      }
+
+      .masthead {
+        padding-top: 1.75rem;
+      }
+
+      .masthead-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 13rem;
+        gap: 2rem;
+        align-items: start;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Poppins", Arial, sans-serif;
+        margin: 0;
+      }
+
+      h1 {
+        font-size: clamp(1.9rem, 3.8vw, 3.2rem);
+        line-height: 0.98;
+        letter-spacing: -0.035em;
+      }
+
+      .institution {
+        margin-top: 0.65rem;
+        font-size: clamp(1.15rem, 2vw, 1.45rem);
+      }
+
+      .meta-list,
+      .icon-links,
+      .news-list,
+      .record-links,
+      .compact-list,
+      .project-points {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .meta-list {
+        margin-top: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem 1rem;
+        color: var(--muted);
+        font-family: "Poppins", Arial, sans-serif;
+        font-size: 0.78rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .bio {
+        margin-top: 1.6rem;
+      }
+
+      .bio p + p {
+        margin-top: 1rem;
+      }
+
+      .link-strip {
+        margin-top: 1.7rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--rule);
+      }
+
+      .icon-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+
+      .icon-links a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.45rem;
+        min-height: 2.75rem;
+        padding: 0.45rem 0.65rem;
+        border-radius: 999px;
+        text-decoration: none;
+      }
+
+      .icon-links a:hover {
+        background: var(--surface);
+        transform: translateY(-1px);
+      }
+
+      .icon-links img {
+        width: 1rem;
+        height: 1rem;
+      }
+
+      .icon-links svg {
+        width: 1rem;
+        height: 1rem;
+        display: block;
+        flex: 0 0 auto;
+      }
+
+      .photo-slot {
+        aspect-ratio: 4 / 5;
+        border: 1px solid var(--rule);
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(243, 241, 234, 0.9)),
+          var(--surface);
+        display: grid;
+        place-items: center;
+        padding: 1rem;
+        color: #6f6d66;
+        font-family: "Poppins", Arial, sans-serif;
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        text-align: center;
+        overflow: hidden;
+      }
+
+      .photo-slot img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      main {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: 13rem minmax(0, 1fr);
+        gap: 2rem;
+        align-items: start;
+      }
+
+      section {
+        padding-top: 1.4rem;
+      }
+
+      section + section {
+        margin-top: 1.85rem;
+      }
+
+      h2 {
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .news-list li,
+      .compact-list li {
+        display: grid;
+        grid-template-columns: 5.25rem minmax(0, 1fr);
+        gap: 0.85rem;
+        padding: 0.72rem 0;
+      }
+
+      .news-list li + li,
+      .compact-list li + li,
+      .publication + .publication {
+        border-top: 1px solid var(--rule);
+      }
+
+      .date {
+        color: var(--muted);
+        font-family: "Poppins", Arial, sans-serif;
+        font-size: 0.76rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        font-variant-numeric: tabular-nums;
+        padding-top: 0.18rem;
+      }
+
+      blockquote {
+        margin: 0 0 1.35rem;
+        padding-left: 1rem;
+        border-left: 3px solid var(--blue);
+        color: #6f6d66;
+      }
+
+      .year-group + .year-group {
+        margin-top: 2rem;
+      }
+
+      .side-header {
+        position: sticky;
+        top: 1.5rem;
+        padding-top: 1.4rem;
+      }
+
+      .side-header-title {
+        font-family: "Poppins", Arial, sans-serif;
+        font-size: 0.82rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #7e7a73;
+      }
+
+      .side-nav {
+        list-style: none;
+        padding: 0;
+        margin: 1rem 0 0;
+      }
+
+      .side-nav li + li {
+        margin-top: 0.55rem;
+      }
+
+      .side-nav a {
+        display: inline-block;
+        font-family: "Poppins", Arial, sans-serif;
+        font-size: 0.88rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #7e7a73;
+        text-decoration: none;
+      }
+
+      .side-nav a:hover {
+        color: var(--orange);
+      }
+
+      .content-column {
+        min-width: 0;
+      }
+
+      h3 {
+        margin-bottom: 0.95rem;
+        font-size: 1.5rem;
+      }
+
+      .year-group > h3 {
+        font-size: 1.15rem;
+        color: #78746d;
+      }
+
+      .publication {
+        padding: 1rem 0;
+      }
+
+      h4 {
+        font-size: 1.28rem;
+        line-height: 1.15;
+      }
+
+      .venue {
+        margin-top: 0.35rem;
+        color: #6f6d66;
+        font-family: "Poppins", Arial, sans-serif;
+        font-size: 1rem;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .authors {
+        margin-top: 0.65rem;
+      }
+
+      .record-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.7rem;
+        margin-top: 0.75rem;
+      }
+
+      .record-links a {
+        display: inline-flex;
+        align-items: center;
+        min-height: 2.65rem;
+        padding: 0.35rem 0.8rem;
+        border: 1px solid var(--rule);
+        border-radius: 999px;
+        background: var(--surface);
+        text-decoration: none;
+        font-family: "Poppins", Arial, sans-serif;
+        font-size: 0.85rem;
+      }
+
+      .record-links a:hover {
+        border-color: var(--orange);
+      }
+
+      .project-record {
+        padding-left: 0.9rem;
+        border-left: 3px solid var(--green);
+      }
+
+      .project-role {
+        margin-top: 0.7rem;
+        color: var(--muted);
+        font-family: "Poppins", Arial, sans-serif;
+        font-size: 0.78rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .project-points {
+        margin-top: 0.8rem;
+      }
+
+      .project-points li {
+        position: relative;
+        padding-left: 1rem;
+      }
+
+      .project-points li + li {
+        margin-top: 0.55rem;
+      }
+
+      .project-points li::before {
+        content: "-";
+        position: absolute;
+        left: 0;
+        color: var(--muted);
+      }
+
+      footer {
+        margin-top: 2.5rem;
+        padding-top: 1rem;
+        color: #6f6d66;
+      }
+
+      @media (max-width: 640px) {
+        .page {
+          width: min(calc(100% - 1rem), 64rem);
+        }
+
+        .masthead-grid {
+          grid-template-columns: minmax(0, 1fr);
+        }
+
+        main {
+          grid-template-columns: minmax(0, 1fr);
+          gap: 1rem;
+        }
+
+        .side-header {
+          position: static;
+          padding-top: 0;
+        }
+
+        .side-nav {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.6rem 1rem;
+          margin-top: 0.75rem;
+        }
+
+        .side-nav li + li {
+          margin-top: 0;
+        }
+
+        .photo-slot {
+          max-width: 12rem;
+        }
+
+        .news-list li,
+        .compact-list li {
+          grid-template-columns: minmax(0, 1fr);
+          gap: 0.25rem;
+        }
+
+        .date {
+          padding-top: 0;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+          transition-duration: 0.01ms !important;
+          animation: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="document">
+        <header class="masthead" id="top">
+          <div class="masthead-grid">
+            <div>
+              <h1>Chenming Zhu</h1>
+              <p class="institution">The University of Hong Kong</p>
+
+              <ul class="meta-list" aria-label="Profile summary">
+                <li>Ph.D. Student @ HKU IDS | HKU-MMLab</li>
+                <li>Hong Kong SAR</li>
+              </ul>
+
+              <div class="bio">
+                <p>
+                  I am a third-year Ph.D. student at the
+                  <a href="https://datascience.hku.hk">HKU Musketeers Foundation Institute of Data Science (HKU-IDS)</a>,
+                  as well as HKU-MMLab, The University of Hong Kong, supervised by Prof.
+                  <a href="https://xh-liu.github.io/">Xihui Liu</a>.
+                </p>
+                <p>
+                  I received my B.Eng. degree from the
+                  <a href="https://www.uestc.edu.cn">University of Electronic Science and Technology of China (UESTC)</a>
+                  and MPhil degree from
+                  <a href="https://www.cuhk.edu.cn">The Chinese University of Hong Kong, Shenzhen (CUHK-Shenzhen)</a>,
+                  supervised by Prof. <a href="https://scholar.google.com">Xiaoguang Han</a>. Before joining HKU-IDS, I
+                  spent wonderful time with great minds and interesting friends at
+                  <a href="https://www.shlab.org.cn">Shanghai AI Laboratory</a>.
+                </p>
+                <p>
+                  My current research interests lie in <strong>Visual Agentic Spatial Intelligence</strong>,
+                  <strong>Unified Multimodal Model (UMM)</strong>, and <strong>World Model</strong>. I’m open to
+                  potential collaborations; feel free to drop me an email if you are interested.
+                </p>
+              </div>
+            </div>
+
+            <aside class="photo-slot" aria-label="Portrait photo">
+              <img src="images/DSCF0014.JPG" alt="Chenming Zhu portrait" />
+            </aside>
+          </div>
+
+          <div class="link-strip">
+            <ul class="icon-links" aria-label="Profile links">
+              <li>
+                <a href="mailto:zcm952742165@gmail.com" aria-label="Email">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M3.75 6.75h16.5A1.75 1.75 0 0 1 22 8.5v7A1.75 1.75 0 0 1 20.25 17.25H3.75A1.75 1.75 0 0 1 2 15.5v-7a1.75 1.75 0 0 1 1.75-1.75Zm0 1.5a.24.24 0 0 0-.25.25v.18l8.2 5.45a.99.99 0 0 0 1.1 0L21 8.68V8.5a.24.24 0 0 0-.25-.25H3.75Zm17.25 2.24-7.37 4.89a2.49 2.49 0 0 1-2.76 0L3.5 10.49v5.01c0 .14.11.25.25.25h16.5c.14 0 .25-.11.25-.25v-5.01Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <span>Email</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://x.com/chenming_eric" aria-label="X">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/x.svg" alt="" />
+                  <span>X</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/ZCMax" aria-label="GitHub">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/github.svg" alt="" />
+                  <span>GitHub</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://linkedin.com/in/chenming-zhu-1a40681b1?originalSubdomain=hk"
+                  aria-label="LinkedIn"
+                >
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/linkedin.svg" alt="" />
+                  <span>LinkedIn</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://scholar.google.com/citations?user=QabwS_wAAAAJ&amp;hl=zh-CN"
+                  aria-label="Google Scholar"
+                >
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/googlescholar.svg" alt="" />
+                  <span>Scholar</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </header>
+
+        <main>
+          <aside class="side-header" aria-label="Section navigation">
+            <div class="side-header-title">Home</div>
+            <ul class="side-nav">
+              <li><a href="#publications">Publications</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#honors-and-awards">Honors</a></li>
+              <li><a href="#academic-services">Services</a></li>
+            </ul>
+          </aside>
+
+          <div class="content-column">
+            <section id="publications" aria-labelledby="publications-heading">
+              <h2 id="publications-heading">Publications</h2>
+              <div class="year-group" aria-labelledby="category-visual-spatial-intelligence">
+                <h3 id="category-visual-spatial-intelligence">Visual Spatial Intelligence</h3>
+
+                <article class="publication">
+                  <h4>G2TAM: Geometry Grounded Track Anything Model</h4>
+                  <p class="venue"><strong>Arxiv 2026</strong></p>
+                  <p class="authors">
+                    <strong>Chenming Zhu</strong>, Peizhou Cao, Jingli Lin, Wenbo Hu, Yunlong Ran, Tai Wang,
+                    Jiangmiao Pang, Xihui Liu
+                  </p>
+                </article>
+
+                <article class="publication">
+                  <h4>MMSI-Video-Bench: A Holistic Benchmark for Video-Based Spatial Intelligence</h4>
+                  <p class="venue"><strong>Arxiv 2026</strong></p>
+                  <p class="authors">
+                    Jingli Lin*, Runsen Xu*, Shaohao Zhu, Sihan Yang, Peizhou Cao, Yunlong Ran, Miao Hu,
+                    <strong>Chenming Zhu</strong>, Yiman Xie, Yilin Long, Wenbo Hu, Dahua Lin, Tai Wang, Jiangmiao Pang
+                  </p>
+                  <div class="record-links">
+                    <a href="https://arxiv.org/abs/2512.10863">Paper</a>
+                    <a href="https://github.com/InternRobotics/MMSI-Video-Bench">Code</a>
+                  </div>
+                </article>
+
+                <article class="publication">
+                  <h4>G2VLM: Geometry Grounded Vision Language Model with Unified 3D Reconstruction and Spatial Reasoning</h4>
+                  <p class="venue"><strong>CVPR 2026</strong></p>
+                  <p class="authors">
+                    Wenbo Hu, Jingli Lin, Yilin Long, Yunlong Ran, Lihan Jiang, Yifan Wang, <strong>Chenming Zhu</strong>,
+                    Runsen Xu, Tai Wang, Jiangmiao Pang
+                  </p>
+                  <div class="record-links">
+                    <a href="https://arxiv.org/abs/2511.21688">Paper</a>
+                    <a href="https://github.com/InternRobotics/G2VLM">Code</a>
+                  </div>
+                </article>
+
+                <article class="publication">
+                  <h4>MMSI-Bench: A Benchmark for Multi-Image Spatial Intelligence</h4>
+                  <p class="venue"><strong>ICLR 2026</strong></p>
+                  <p class="authors">
+                    Sihan Yang*, Runsen Xu*, Yiman Xie, Sizhe Yang, Mo Li, Jingli Lin, <strong>Chenming Zhu</strong>,
+                    Xiaochen Chen, Haodong Duan, Xiangyu Yue, Dahua Lin, Tai Wang, Jiangmiao Pang
+                  </p>
+                  <div class="record-links">
+                    <a href="https://arxiv.org/abs/2505.23764">Paper</a>
+                    <a href="https://github.com/OpenRobotLab/MMSI-Bench">Code</a>
+                  </div>
+                </article>
+
+                <article class="publication">
+                  <h4>OST-Bench: Evaluating the Capabilities of MLLMs in Online Spatio-temporal Scene Understanding</h4>
+                  <p class="venue"><strong>NeurIPS 2025</strong></p>
+                  <p class="authors">
+                    Jingli Lin*, <strong>Chenming Zhu*</strong>, Runsen Xu, Xiaohan Mao, Xihui Liu, Tai Wang, Jiangmiao Pang
+                  </p>
+                  <p class="authors">Project Lead</p>
+                  <div class="record-links">
+                    <a href="https://arxiv.org/abs/2507.07984">Paper</a>
+                    <a href="https://github.com/OpenRobotLab/OST-Bench">Code</a>
+                  </div>
+                </article>
+              </div>
+
+              <div class="year-group" aria-labelledby="category-embodied-3d-perception">
+                <h3 id="category-embodied-3d-perception">Embodied 3D Perception</h3>
+
+                <article class="publication">
+                  <h4>LLaVA-3D: A Simple yet Effective Pathway to Empowering LMMs with 3D Capabilities</h4>
+                  <p class="venue"><strong>ICCV 2025</strong></p>
+                  <p class="authors"><strong>Chenming Zhu</strong>, Tai Wang, Wenwei Zhang, Jiangmiao Pang, Xihui Liu</p>
+                  <div class="record-links">
+                    <a href="https://arxiv.org/abs/2409.18125">Paper</a>
+                    <a href="https://github.com/ZCMax/LLaVA-3D">Code</a>
+                  </div>
+                </article>
+
+                <article class="publication">
+                  <h4>ScanReason: Empowering 3D Visual Grounding with Reasoning Capabilities</h4>
+                  <p class="venue"><strong>ECCV 2024</strong></p>
+                  <p class="authors"><strong>Chenming Zhu</strong>, Tai Wang, Wenwei Zhang, Kai Chen, Xihui Liu</p>
+                  <div class="record-links">
+                    <a href="https://arxiv.org/abs/2407.01525">Paper</a>
+                    <a href="https://github.com/ZCMax/ScanReason">Code</a>
+                  </div>
+                </article>
+
+                <article class="publication">
+                  <h4>MMScan: A Multi-Modal 3D Scene Dataset with Hierarchical Grounded Language Annotations</h4>
+                  <p class="venue"><strong>NeurIPS 2024</strong></p>
+                  <p class="authors">
+                    Ruiyuan Lyu, Tai Wang, Jingli Lin, Shuai Yang, Xiaohan Mao, Yilun Chen, Runsen Xu, Haifeng Huang,
+                    <strong>Chenming Zhu</strong>, Dahua Lin, Jiangmiao Pang
+                  </p>
+                  <div class="record-links">
+                    <a href="https://arxiv.org/abs/2406.09401">Paper</a>
+                    <a href="https://github.com/OpenRobotLab/EmbodiedScan">Code</a>
+                  </div>
+                </article>
+
+                <article class="publication">
+                  <h4>EmbodiedScan: A Holistic Multi-Modal 3D Perception Suite Towards Embodied AI</h4>
+                  <p class="venue"><strong>CVPR 2024</strong></p>
+                  <p class="authors">
+                    Tai Wang*, Xiaohan Mao*, <strong>Chenming Zhu*</strong>, Runsen Xu, Ruiyuan Lyu, Peisen Li, Xiao Chen,
+                    Wenwei Zhang, Kai Chen, Tianfan Xue, Xihui Liu, Cewu Lu, Dahua Lin, Jiangmiao Pang
+                  </p>
+                  <div class="record-links">
+                    <a href="https://openaccess.thecvf.com/content/CVPR2024/html/Wang_EmbodiedScan_A_Holistic_Multi-Modal_3D_Perception_Suite_Towards_Embodied_AI_CVPR_2024_paper.html">Paper</a>
+                    <a href="https://github.com/InternRobotics/EmbodiedScan">Code</a>
+                  </div>
+                </article>
+              </div>
+
+              <div class="year-group" aria-labelledby="category-vln">
+                <h3 id="category-vln">Vision-Language Navigation (VLN)</h3>
+
+                <article class="publication">
+                  <h4>StreamVLN: Streaming Vision-and-Language Navigation via SlowFast Context Modeling</h4>
+                  <p class="venue"><strong>ICRA 2026</strong></p>
+                  <p class="authors">
+                    Meng Wei, Chenyang Wan, Xiqian Yu, Tai Wang, Yuqiang Yang, Xiaohan Mao, <strong>Chenming Zhu</strong>,
+                    Wenzhe Cai, Hanqing Wang, Yilun Chen, Xihui Liu, Jiangmiao Pang
+                  </p>
+                  <div class="record-links">
+                    <a href="https://arxiv.org/abs/2507.05240">Paper</a>
+                    <a href="https://github.com/InternRobotics/StreamVLN">Code</a>
+                  </div>
+                </article>
+
+                <article class="publication">
+                  <h4>InternVLA-N1: An Open Dual-System Vision-Language Navigation Foundation Model with Learned Latent Plans</h4>
+                  <p class="venue"><strong>Technical report 2026</strong></p>
+                  <p class="authors">Core Contributor</p>
+                  <div class="record-links">
+                    <a href="https://internrobotics.github.io/internvla-n1.github.io/static/pdfs/InternVLA_N1.pdf">Paper</a>
+                    <a href="https://github.com/InternRobotics/InternNav">Code</a>
+                  </div>
+                </article>
+              </div>
+            </section>
+
+            <section id="projects" aria-labelledby="projects-heading">
+              <h2 id="projects-heading">Projects</h2>
+              <article class="project-record">
+                <h3>MMDetection3D</h3>
+                <p>OpenMMLab next-generation platform for general 3D perception. (GitHub &gt; 5k stars)</p>
+                <p class="project-role">Core Maintainer &amp; Developer</p>
+                <ul class="project-points">
+                  <li>
+                    MMDetection3D unifies the pipeline and modular design of mono3D, LiDAR-based, and multi-modality 3D
+                    object detection.
+                  </li>
+                  <li>
+                    It supports state-of-the-art 3D object detectors of different modalities in multiple indoor and outdoor
+                    datasets.
+                  </li>
+                  <li>
+                    It builds strong foundations, in a universal framework, for general 3D object detection.
+                  </li>
+                </ul>
+              </article>
+            </section>
+
+            <section id="honors-and-awards" aria-labelledby="honors-heading">
+              <h2 id="honors-heading">Honors and Awards</h2>
+              <ul class="compact-list">
+                <li>
+                  <span class="date">2022</span>
+                  <span>2nd of the Waymo 3D Camera-only Detection Challenge 2022</span>
+                </li>
+                <li>
+                  <span class="date">2017-2018 / 2018-2019</span>
+                  <span>Excellent Undergraduate Scholarship of UESTC</span>
+                </li>
+                <li>
+                  <span class="date">2018</span>
+                  <span>Outstanding Student Award of School of Computer Science and Engineering, UESTC</span>
+                </li>
+              </ul>
+            </section>
+
+            <section id="academic-services" aria-labelledby="services-heading">
+              <h2 id="services-heading">Academic Services</h2>
+              <p>I served as a reviewer for CVPR, ICCV, ECCV, NeurIPS, AAAI, ICLR, and ICML.</p>
+            </section>
+          </div>
+        </main>
+
+        <footer>
+          <a href="#top">Back to top</a>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
