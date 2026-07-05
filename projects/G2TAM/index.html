@@ -3,404 +3,294 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>G<sup>2</sup>TAM: Geometry Grounded Track Anything Model</title>
+    <title>G2TAM: Geometry Grounded Track Anything Model</title>
+    <meta name="description" content="G2TAM is a geometry-grounded framework for promptable instance tracking in 3D from unordered RGB images or videos.">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <style>
-        /* Placeholder background for missing thumbnail images */
-        .thumbnail-item img[src*="placeholder"] {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            object-fit: cover;
-        }
-
-        .thumbnail-item img {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-        }
-
-        iframe {
-        border-radius: 0.5em;
-        width: 27.5em;
-        height: 27.5em;
-        border: none;
-        box-shadow: 0 0 1em 0em rgba(0, 0, 0, 0.15);
-        }
-        @media (max-width: 768px) {
-        iframe {
-            width: 100%;
-            height: 30em;
-        }
-        }
-
-        #architecture-img {
-        width: 90%;
-        margin: 0 auto;
-        display: block;
-        border: none;
-        border-radius: 0; /* removed border radius */
-        box-shadow: none; /* removed box shadow */
-        }
-
-    </style>
-
-    <!-- 导航栏 -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h2>G<sup>2</sup>TAM</h2>
-            </div>
-            <div class="nav-links">
-                <a href="#overview">Overview</a>
-                <a href="#abilities">Abilities</a>
-                <a href="#interactive-examples">Demo</a>
-                <a href="#analysis">Comparison</a>
-                <a href="#awesome-projects">Community</a>
-                <a href="#citation">Citation</a>
-            </div>
+    <nav class="navbar" aria-label="Primary">
+        <a class="nav-logo" href="#top">G<sup>2</sup>TAM</a>
+        <div class="nav-links">
+            <a href="#overview">Overview</a>
+            <a href="#method">Method</a>
+            <a href="#instrack">InsTrack</a>
+            <a href="#results">Results</a>
+            <a href="#citation">Citation</a>
         </div>
     </nav>
 
-    <!-- Banner 区域 -->
-    <section class="banner">
-        <div class="banner-content">
-            <div class="banner-text">
-                <h2 class="banner-title">G<sup>2</sup>TAM</h2>
-                <h3 class="banner-subtitle">Geometry Grounded Track Anything Model</h3>
-                <div class="authors">
-                    <a href="https://haotongl.github.io/" target="_blank" >Chenming Zhu</a>,
-                    <a href="https://github.com/SiliChen321" target="_blank">Peizhou Cao</a>,
-                    <a href="https://liewjunhao.github.io/" target="_blank">Jingli Lin</a>,
-                    <a href="https://donydchen.github.io" target="_blank">Wenbo Hu</a>,
-                    <a href="https://zhyever.github.io/" target="_blank">Yunlong Ran</a>,
-                    <a href="https://scholar.google.com/citations?user=MjXxWbUAAAAJ" target="_blank">Jiangmiao Pang</a>,
-                    <a href="https://scholar.google.com/citations?user=MjXxWbUAAAAJ" target="_blank">Tai Wang&dagger;</a>,
-                    <a href="https://scholar.google.com/citations?user=Q8iay0gAAAAJ" target="_blank">Xihui Liu<sup>*</sup></a>
-                    <!-- <br>
-                    <a href="https://bingykang.github.io/" target="_blank">Bingyi Kang<sup>*</sup>&dagger;</a> -->
-
-                    <br><br>
-                    &dagger;Proejct Lead, *Corresponding Author
-                </div>
-
-                <div class="banner-links">
-                    <a href="assets/da3_tech_report_2025.pdf" target="_blank" class="link-btn">
-                        <i class="fas fa-file-pdf"></i> Tech Report
-                    </a>
-                    <a href="https://arxiv.org/abs/2511.10647" target="_blank" class="link-btn">
-                        <i class="fas fa-graduation-cap"></i> arXiv
-                    </a>
-                    <a href="https://huggingface.co/spaces/depth-anything/depth-anything-3" target="_blank" class="link-btn">
-                        <i class="fas fa-rocket"></i> Demo
-                    </a>
-                    <a href="https://github.com/ByteDance-Seed/depth-anything-3" target="_blank" class="link-btn">
-                        <i class="fab fa-github"></i> Code
-                    </a>
-                    <!-- <a href="/gallery.html" target="_blank" class="link-btn">
-                        <i class="fas fa-images"></i> Gallery
-                    </a> -->
-                </div>
+    <header id="top" class="hero">
+        <div class="hero-copy">
+            <p class="eyebrow">ICML 2026 submission</p>
+            <h1>G<sup>2</sup>TAM</h1>
+            <p class="subtitle">Geometry Grounded Track Anything Model</p>
+            <p class="lead">
+                Promptable instance tracking in 3D space from unordered RGB images or videos,
+                using geometry as an implicit memory for stable identity reasoning across views and time.
+            </p>
+            <p class="authors">
+                Chenming Zhu, Peizhou Cao, Jingli Lin, Wenbo Hu, Yunlong Ran,
+                Jiangmiao Pang, Tai Wang, Xihui Liu
+            </p>
+            <p class="affiliations">
+                HKU · Shanghai AI Laboratory · BUAA · SJTU · UCLA · ZJU
+            </p>
+            <div class="hero-actions" aria-label="Page shortcuts">
+                <a class="action-link" href="#overview">
+                    <i class="fas fa-file-lines" aria-hidden="true"></i>
+                    <span>Overview</span>
+                </a>
+                <a class="action-link" href="#results">
+                    <i class="fas fa-chart-line" aria-hidden="true"></i>
+                    <span>Results</span>
+                </a>
+                <a class="action-link" href="#citation">
+                    <i class="fas fa-quote-right" aria-hidden="true"></i>
+                    <span>BibTeX</span>
+                </a>
             </div>
         </div>
-    </section>
 
-    <!-- 主演示视频 -->
-    <section class="main-demo">
-        <div class="container">
-            <div class="tldr-content">
-                <p>
-                    <i class="fas fa-bolt"></i> <strong>TL;DR:</strong> 
-                    <!-- Depth Anything 3 turns any visual input into superior geometry and 3DGS rendering. <br> -->
-                    <!-- Depth Anything 3 recovers the space with superior geometry and 3DGS rendering from any visual inputs. <br>
-                    <strong>The secret?</strong> No complex tasks! No special architecture! <br>
-                    just a single, plain transformer trained with a depth-ray representation. -->
-                    <!-- Radical simplicity: just a single, plain transformer trained with a depth-ray representation. -->
-                    <!-- Depth Anything 3 recovers the visual space from arbitrary visual inputs,<br> -->
-                    <!-- delivering leading geometry (camera poses, depth maps) and 3DGS rendering quality. -->
-                    G<sup>2</sup>TAM supports various prompts—including text, point, and box prompts—to perform joint 3D reconstruction and spatial–temporal consistent instance segmentation, enabling promptable instance tracking in 3D space.
+        <figure class="hero-figure">
+            <img src="assets/teaser_v2.jpeg" alt="G2TAM teaser showing text, point, and box prompts producing consistent masks and 3D reconstruction across views.">
+            <figcaption>
+                Text, point, and box prompts are grounded in one geometry-semantic representation,
+                enabling instance-consistent masks and reconstruction from RGB inputs.
+            </figcaption>
+        </figure>
+    </header>
+
+    <main>
+        <section id="overview" class="section section-overview">
+            <div class="section-heading">
+                <p class="eyebrow">Overview</p>
+                <h2>Tracking with spatial memory, not only appearance memory.</h2>
+            </div>
+            <div class="overview-grid">
+                <p class="tldr">
+                    <strong>TL;DR</strong>
+                    G<sup>2</sup>TAM takes unordered images or videos plus a text, point, or box prompt,
+                    then jointly predicts 3D geometry and spatially consistent instance masks.
                 </p>
+                <div class="abstract-text">
+                    <p>
+                        Human spatial understanding arises from jointly perceiving geometry and semantics,
+                        enabling consistent object identification and localization across viewpoints and time.
+                        Current video segmentation models rely on explicit object appearance memory banks,
+                        but remain vulnerable to large viewpoint changes and long-term occlusions.
+                    </p>
+                    <p>
+                        G<sup>2</sup>TAM uses spatially aligned geometric representations as implicit memory.
+                        A cross-modal spatial encoder integrates visual and textual prompts into a shared
+                        geometric space, supporting end-to-end reconstruction and instance-consistent mask prediction.
+                    </p>
+                </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="abstract-content" style="text-align: center;"> <h3><i class="fas fa-play-circle"></i> Demo</h3>
-                
-                <img src="assets/sam2+depthanything.gif" alt="G2TAM Demo" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        </section>
 
+        <section id="method" class="section section-method">
+            <div class="section-heading">
+                <p class="eyebrow">Method</p>
+                <h2>Geometry as implicit memory.</h2>
             </div>
-        </div>
-    </section>
-
-    <!-- Abstract -->
-    <section id="overview" class="abstract" style="text-align: left;">
-        <div class="container">
-            <div class="abstract-content" style="text-align: left;">
-                <h3><i class="fas fa-file-alt"></i> Abstract</h3>
-                <p>Human spatial understanding arises from jointly perceiving geometry and semantics, enabling consistent object identification and localization across viewpoints and time.  
-                    Current video segmentation models depend on explicit object appearance memory banks for instance tracking, yet they remain vulnerable to large viewpoint changes and long-term occlusions.  
-                    Leveraging the spatial consistency afforded by modern feed-forward 3D reconstruction models, we propose the G<sup>2</sup>TAM, a unified framework for promptable instance tracking in 3D using only unordered RGB images or videos.  
-                    G<sup>2</sup>TAM employs spatially aligned geometric representations as implicit memory, ensuring stable instance identity and localization across frames and views.  
-                    At its core is a cross-modal spatial encoder that integrates visual and textual prompts into a shared geometric space, enabling end-to-end spatial reconstruction and instance-consistent mask prediction.  
-                    To support training and evaluation, we construct InsTrack, a large-scale dataset with a dedicated validation split for benchmarking.  
-                    Extensive experiments show that G<sup>2</sup>TAM delivers strong cross-view consistency, promptable instance spatial tracking, video object segmentation and spatial reconstruction, establishing a foundation for interactive, geometry-grounded spatial reasoning.</p>
-                <br>
-                <img src="assets/teaser_v2.jpeg" alt="Performance Comparison Chart" style="width: 100%; height: auto; margin-top: 0px; border-radius: 8px;">
+            <figure class="wide-figure">
+                <img src="assets/model_v4.jpeg" alt="G2TAM architecture with prompt encoders, cross-modal spatial encoder, geometry decoder, and mask decoder.">
+            </figure>
+            <div class="method-grid">
+                <article>
+                    <span class="step-index">01</span>
+                    <h3>Prompt encoders</h3>
+                    <p>
+                        Point and box prompts are represented through coordinates and type embeddings.
+                        Text prompts are encoded with CLIP and projected into the same latent space.
+                    </p>
+                </article>
+                <article>
+                    <span class="step-index">02</span>
+                    <h3>Cross-modal spatial encoder</h3>
+                    <p>
+                        Prompt tokens are fused with per-frame DINOv2 vision tokens and register tokens,
+                        then processed through intra-view and global cross-view attention.
+                    </p>
+                </article>
+                <article>
+                    <span class="step-index">03</span>
+                    <h3>Geometry and mask decoders</h3>
+                    <p>
+                        The fused representation predicts camera geometry, point maps, confidence maps,
+                        and prompt-conditioned masks without a separate temporal memory bank.
+                    </p>
+                </article>
             </div>
-        </div>
-    </section>
+            <figure class="inline-figure">
+                <img src="assets/mode.png" alt="Prompt handling modes in the cross-modal spatial encoder.">
+                <figcaption>
+                    Visual prompts are localized to prompted frames, while text prompts act as global conditioning across frames.
+                </figcaption>
+            </figure>
+        </section>
 
-    <section id="gif-demo" class="abstract">
-        <div class="container">
-            <div class="abstract-content" style="text-align: center;"> <h3><i class="fas fa-file-pdf"></i> Architecture </h3>
-                <p>At the core of G<sup>2</sup>TAM is the idea of <strong>Geometry as Implicit Memory</strong>. To our knowledge, we are the first work to use the spatially aligned geometric representation as the underlying persistent memory for object identity.
-                    Instead of relying on explicit temporal storage, G<sup>2</sup>TAM embeds text/visual prompts directly into a unified geometric semantic representation through a <strong>simple yet highly effective cross-modal spatial encoder.</strong></p>
-                <br>
-                <img src="assets/model_v4.jpeg" alt="G2TAM Demo" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-
+        <section id="instrack" class="section section-instrack">
+            <div class="section-heading">
+                <p class="eyebrow">InsTrack and PIST</p>
+                <h2>A benchmark for promptable instance spatial tracking.</h2>
             </div>
-        </div>
-    </section>
-
-    <section id="gif-demo" class="abstract">
-        <div class="container">
-            <div class="abstract-content" style="text-align: center;"> <h3><i class="fas fa-images"></i> Promptable Instance Spatial Tracking</h3>
-                <p>Promptable Instance Spatial Tracking (PIST), designed to evaluate a model's instance segmentation spatial consistency across views in the static scenario. Given an input prompt—such as a point, bounding box on any view, or a referring text expression—the goal is to produce spatially consistent masks for the corresponding instance across all views.</p>
-                <br>
-                <img src="assets/viz_2.png" alt="G2TAM Demo" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Abilities -->
-    <section id="abilities" class="applications">
-        <div class="container">
-            <h2 class="section-title">Abilities</h2>
-            <div class="applications-carousel">
-                <div class="carousel-container">
-                    <button class="carousel-btn prev-btn" onclick="changeApplication(-1)">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <div class="carousel-content">
-                        <div class="application-slide active">
-                            <div class="application-video">
-                                <!-- Loading Indicator -->
-                                <div class="video-loader app-video-loader">
-                                    <div class="loader-spinner"></div>
-                                    <div class="loader-text">Loading video...</div>
-                                </div>
-                                <video playsinline muted autoplay loop class="app-video lazy-video" preload="metadata" data-src="assets/paoku_compressed.mp4">
-                                    <source data-src="assets/paoku_compressed.mp4" type="video/mp4">
-                                    Your browser does not support video playback.
-                                </video>
-                            </div>
-                            <div class="application-info">
-                                <h3>Video Reconstruction</h3>
-                                <p>
-                                    DA3 recovers the visual space from any number of views, covering from single view to multiple views.
-                                    This demo illustrates the ability of DA3 to recover the visual space from a difficult video.
-                                </p>
-                            </div>
+            <div class="dataset-layout">
+                <div class="dataset-copy">
+                    <p>
+                        InsTrack builds on ScanNet++ and provides RGB images, multi-modal prompts,
+                        depth maps, camera poses, and 3D-consistent instance masks. The benchmark is
+                        split into InsTrack-Text and InsTrack-Visual to evaluate language and visual prompts separately.
+                    </p>
+                    <div class="stat-grid">
+                        <div class="stat">
+                            <strong>856</strong>
+                            <span>training scenes</span>
                         </div>
-                        <div class="application-slide">
-                            <div class="application-video">
-                                <!-- Loading Indicator -->
-                                <div class="video-loader app-video-loader">
-                                    <div class="loader-spinner"></div>
-                                    <div class="loader-text">Loading video...</div>
-                                </div>
-                                <video controls playsinline muted autoplay loop class="app-video lazy-video" preload="metadata" data-src="assets/slam_demo.mp4">
-                                    <source data-src="assets/slam_demo.mp4" type="video/mp4">
-                                    Your browser does not support video playback.
-                                </video>
-                            </div>
-                            <div class="application-info">
-                                <h3>SLAM for Large-Scale Scenes</h3>
-                                <p>
-                                    Accurate visual geometry estimation improves SLAM performance. Quantitative results show that simply replacing VGGT in VGGT-Long with DA3 (DA3-Long) significantly reduces drift in large-scale environments, even better than COLMAP, which takes more 48 hours to complete.
-                                </p>
-                            </div>
+                        <div class="stat">
+                            <strong>50</strong>
+                            <span>validation scenes</span>
                         </div>
-                        <div class="application-slide">
-                            <div class="application-video">
-                                <!-- Loading Indicator -->
-                                <div class="video-loader app-video-loader">
-                                    <div class="loader-spinner"></div>
-                                    <div class="loader-text">Loading video...</div>
-                                </div>
-                                <video playsinline muted autoplay loop class="app-video lazy-video" preload="metadata" data-src="assets/gs.mp4">
-                                    <source data-src="assets/gs.mp4" type="video/mp4">
-                                    Your browser does not support video playback.
-                                </video>
-                            </div>
-                            <div class="application-info">
-                                <h3>Feed-Forward 3D Gaussians Estimation</h3>
-                                <p>
-                                    By freezing the entire backbone and training a DPT head to predict 3DGS parameters, our model achieves very strong and generalizable novel view synthesis capability.
-                                </p>
-                            </div>
+                        <div class="stat">
+                            <strong>99,666</strong>
+                            <span>text prompts</span>
                         </div>
-                        <div class="application-slide">
-                            <div class="application-video">
-                                <!-- Loading Indicator -->
-                                <div class="video-loader app-video-loader">
-                                    <div class="loader-spinner"></div>
-                                    <div class="loader-text">Loading video...</div>
-                                </div>
-                                <video playsinline muted autoplay loop class="app-video lazy-video" preload="metadata" data-src="assets/ad.mp4">
-                                    <source data-src="assets/ad.mp4" type="video/mp4">
-                                    Your browser does not support video playback.
-                                </video>
-                            </div>
-                            <div class="application-info">
-                                <h3>Spatial Perception from Multiple Cameras </h3>
-                                <p>Given several images of different viewpoints from a vehicle (even without overlap), DA3 estimates stable and fusible depth maps, enhancing autonomous vehicles' environmental understanding.</p>
-                            </div>
+                        <div class="stat">
+                            <strong>77,007</strong>
+                            <span>visual prompts</span>
                         </div>
                     </div>
-                    <button class="carousel-btn next-btn" onclick="changeApplication(1)">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
                 </div>
-                <div class="carousel-indicators">
-                    <span class="indicator active" onclick="setApplication(0)"></span>
-                    <span class="indicator" onclick="setApplication(1)"></span>
-                    <span class="indicator" onclick="setApplication(2)"></span>
-                    <span class="indicator" onclick="setApplication(3)"></span>
+                <figure class="side-figure">
+                    <img src="assets/vis_results_v2.jpeg" alt="Qualitative InsTrack validation examples with spatially consistent masks across frames.">
+                    <figcaption>
+                        Qualitative InsTrack examples show consistent target masks across large view changes and diverse prompt types.
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="task-strip">
+                <div>
+                    <h3>Promptable Instance Spatial Tracking</h3>
+                    <p>
+                        Given a point, box, or referring expression on any view, PIST evaluates whether
+                        the same object is segmented consistently across all views.
+                    </p>
+                </div>
+                <div class="metric-pair">
+                    <span>S-mIoU</span>
+                    <span>S-SR</span>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="interactive-examples" class="interactive-results">
-        <div class="container">
-          <h2 class="section-title">Interactive Examples</h2>
-          
-          <!-- Main Display Area -->
-          <div class="main-display-container">
-            <!-- Loading Indicator for iframe -->
-            <div class="iframe-loader" id="iframeLoader">
-              <div class="loader-spinner"></div>
-              <div class="loader-text">Loading interactive demo...</div>
+        <section id="results" class="section section-results">
+            <div class="section-heading">
+                <p class="eyebrow">Results</p>
+                <h2>Strong spatial consistency across static and dynamic settings.</h2>
             </div>
-            <iframe 
-              id="mainIframe" 
-              class="main-iframe"
-              src="https://depth-anything-3.github.io/glb-viewer.html?src=https://depth-anything-3.github.io/assets/glb/Colosseum.glb">
-            </iframe>
-          </div>
-          
-          <!-- Thumbnail Gallery -->
-          <div class="thumbnail-gallery">
-            <div class="thumbnail-item active" 
-                 data-src="https://depth-anything-3.github.io/glb-viewer.html?src=https://depth-anything-3.github.io/assets/glb/Colosseum.glb"
-                 onclick="switchIframe(this)">
-              <img src="assets/glb/Colosseum.jpg" alt="Example 1" onerror="this.src='assets/placeholder.svg'">
-              <div class="thumbnail-label">Scene 1</div>
-            </div>
-
-            <div class="thumbnail-item" 
-                  data-src="https://depth-anything-3.github.io/glb-viewer.html?src=https://depth-anything-3.github.io/assets/glb/spp_cc523.glb"
-                  onclick="switchIframe(this)">
-              <img src="assets/glb/spp_cc523.jpg" alt="Example 2" onerror="this.src='assets/placeholder.svg'">
-              <div class="thumbnail-label">Scene 2</div>
+            <div class="result-cards">
+                <article>
+                    <span>Overall PIST</span>
+                    <strong>74.3 / 80.1</strong>
+                    <p>S-mIoU / S-SR on InsTrack validation, compared with SAM2 at 47.6 / 53.1 on visual prompts.</p>
+                </article>
+                <article>
+                    <span>InsTrack Text</span>
+                    <strong>72.3 / 77.6</strong>
+                    <p>Substantially above ReferFormer at 37.6 / 43.7 and ReferDINO at 41.7 / 48.2.</p>
+                </article>
+                <article>
+                    <span>InsTrack Visual</span>
+                    <strong>75.8 / 81.2</strong>
+                    <p>Large gains over Cutie-base and SAM2 under large viewpoint changes.</p>
+                </article>
+                <article>
+                    <span>RGB-only geometry</span>
+                    <strong>2.51 / 86.91</strong>
+                    <p>Best Abs. Rel / delta on the InsTrack reconstruction metrics reported in the paper.</p>
+                </article>
             </div>
 
-            <div class="thumbnail-item" 
-                 data-src="https://depth-anything-3.github.io/glb-viewer.html?src=https://depth-anything-3.github.io/assets/glb/7s_heads.glb"
-                 onclick="switchIframe(this)">
-              <img src="assets/glb/7s_heads.jpg" alt="Example 3" onerror="this.src='assets/placeholder.svg'">
-              <div class="thumbnail-label">Scene 3</div>
-            </div>
+            <figure class="wide-figure">
+                <img src="assets/compare_v2_compressed_5000.jpg" alt="Qualitative comparison between G2TAM variants and SAM2 across a challenging sequence.">
+                <figcaption>
+                    Joint reconstruction and segmentation stabilizes identity tracking where segmentation-only variants and SAM2 fail.
+                </figcaption>
+            </figure>
 
-            <div class="thumbnail-item" 
-                 data-src="https://depth-anything-3.github.io/glb-viewer.html?src=https://depth-anything-3.github.io/assets/glb/dtu_118.glb"
-                 onclick="switchIframe(this)">
-              <img src="assets/glb/dtu_118.jpg" alt="Example 4" onerror="this.src='assets/placeholder.svg'">
-              <div class="thumbnail-label">Scene 4</div>
+            <div class="comparison-table-wrap" aria-label="Selected quantitative results">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Task</th>
+                            <th>Setting</th>
+                            <th>Baseline</th>
+                            <th>G<sup>2</sup>TAM</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>3D visual grounding</td>
+                            <td>ScanRefer Acc@0.5</td>
+                            <td>VLM-Grounder 32.8</td>
+                            <td>45.7</td>
+                        </tr>
+                        <tr>
+                            <td>3D visual grounding</td>
+                            <td>NR3D Acc@0.5</td>
+                            <td>3D-VisTA 42.2</td>
+                            <td>45.8</td>
+                        </tr>
+                        <tr>
+                            <td>Semi-supervised VOS</td>
+                            <td>MOSE val J&amp;F</td>
+                            <td>SAM2 75.2</td>
+                            <td>77.8</td>
+                        </tr>
+                        <tr>
+                            <td>Referring VOS</td>
+                            <td>Ref-YouTube-VOS J&amp;F</td>
+                            <td>ReferDINO 69.3</td>
+                            <td>72.2</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            
-            <div class="thumbnail-item" 
-                 data-src="https://depth-anything-3.github.io/glb-viewer.html?src=https://depth-anything-3.github.io/assets/glb/im_5277.glb"
-                 onclick="switchIframe(this)">
-              <img src="assets/glb/im_5277.jpg" alt="Example 5" onerror="this.src='assets/placeholder.svg'">
-              <div class="thumbnail-label">Scene 5</div>
-            </div>
+        </section>
 
-            <div class="thumbnail-item" 
-                data-src="https://depth-anything-3.github.io/glb-viewer.html?src=https://depth-anything-3.github.io/assets/glb/im_thomas.glb"
-                onclick="switchIframe(this)">
-                <img src="assets/glb/im_thomas.jpg" alt="Example 6" onerror="this.src='assets/placeholder.svg'">
-                <div class="thumbnail-label">Scene 6</div>
+        <section class="section section-memory">
+            <div class="section-heading">
+                <p class="eyebrow">Long-term Spatial Memory</p>
+                <h2>Explore, leave, revisit, and keep the same identity.</h2>
             </div>
-            
-            <div class="thumbnail-item" 
-                 data-src="https://depth-anything-3.github.io/build/?playbackPath=https://depth-anything-3.github.io/assets/viser/horsejump-high.viser&initDistanceScale=1&initHeightOffset=0.0"
-                 onclick="switchIframe(this)">
-              <img src="assets/viser/horsejump-high.jpg" alt="Example 7" onerror="this.src='assets/placeholder.svg'">
-              <div class="thumbnail-label">Scene 7</div>
-            </div>
-            
-            <div class="thumbnail-item" 
-                 data-src="https://depth-anything-3.github.io/build/?playbackPath=https://depth-anything-3.github.io/assets/viser/car-roundabout.viser&initDistanceScale=1&initHeightOffset=0.0"
-                 onclick="switchIframe(this)">
-              <img src="assets/viser/car-roundabout.jpg" alt="Example 8" onerror="this.src='assets/placeholder.svg'">
-              <div class="thumbnail-label">Scene 8</div>
-            </div>
-            
-            <div class="thumbnail-item" 
-                 data-src="https://depth-anything-3.github.io/build/?playbackPath=https://depth-anything-3.github.io/assets/viser/breakdance.viser&initDistanceScale=1&initHeightOffset=0.0"
-                 onclick="switchIframe(this)">
-              <img src="assets/viser/breakdance.jpg" alt="Example 9" onerror="this.src='assets/placeholder.svg'">
-              <div class="thumbnail-label">Scene 9</div>
-            </div>
-            
-            <div class="thumbnail-item" 
-                 data-src="https://depth-anything-3.github.io/build/?playbackPath=https://depth-anything-3.github.io/assets/viser/dog.viser&initDistanceScale=1&initHeightOffset=0.0"
-                 onclick="switchIframe(this)">
-              <img src="assets/viser/dog.jpg" alt="Example 10" onerror="this.src='assets/placeholder.svg'">
-              <div class="thumbnail-label">Scene 10</div>
-            </div>
-            
-            <div class="thumbnail-item" 
-                 data-src="https://depth-anything-3.github.io/build/?playbackPath=https://depth-anything-3.github.io/assets/viser/drift-straight.viser&initDistanceScale=1&initHeightOffset=-0.05"
-                 onclick="switchIframe(this)">
-              <img src="assets/viser/drift-straight.jpg" alt="Example 11" onerror="this.src='assets/placeholder.svg'">
-              <div class="thumbnail-label">Scene 11</div>
-            </div>
-            
-            <div class="thumbnail-item" 
-                 data-src="https://depth-anything-3.github.io/build/?playbackPath=https://depth-anything-3.github.io/assets/viser/car-turn.viser&initDistanceScale=1&initHeightOffset=0.0"
-                 onclick="switchIframe(this)">
-              <img src="assets/viser/car-turn.jpg" alt="Example 12" onerror="this.src='assets/placeholder.svg'">
-              <div class="thumbnail-label">Scene 12</div>
-            </div>
-          </div>
-        </div>
-    </section>
+            <figure class="wide-figure">
+                <img src="assets/long_term_memory.png" alt="Long-term explore-and-revisit trajectory showing G2TAM re-recognizing target objects after returning to the scene.">
+                <figcaption>
+                    In explore-and-revisit trajectories, G<sup>2</sup>TAM re-recognizes targets after long temporal gaps by grounding them in spatial structure.
+                </figcaption>
+            </figure>
+        </section>
 
-
-    <!-- Citation -->
-    <section id="citation" class="citation">
-        <div class="container">
-            <h2 class="section-title">Citation</h2>
-            <div class="citation-box">
-                <pre><code>
-@article{depthanything3,
-  title={Depth Anything 3: recovering the visual space from any views},
-  author={Haotong Lin and Sili Chen and Jun Hao Liew and Donny Y. Chen and Zhenyu Li and Guang Shi and Jiashi Feng and Bingyi Kang},
-  journal={arXiv preprint arXiv:2511.10647},
-  year={2025}
+        <section id="citation" class="section section-citation">
+            <div class="section-heading">
+                <p class="eyebrow">Citation</p>
+                <h2>Reference the project.</h2>
+            </div>
+            <pre class="citation-box"><code>@article{zhu2026g2tam,
+  title={G2TAM: Geometry Grounded Track Anything Model},
+  author={Zhu, Chenming and Cao, Peizhou and Lin, Jingli and Hu, Wenbo and Ran, Yunlong and Pang, Jiangmiao and Wang, Tai and Liu, Xihui},
+  journal={arXiv preprint},
+  year={2026}
 }</code></pre>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Depth Anything 3. All rights reserved.</p>
-        </div>
+        <p>G<sup>2</sup>TAM: Geometry Grounded Track Anything Model</p>
     </footer>
 
     <script src="script.js"></script>
